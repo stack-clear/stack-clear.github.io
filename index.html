@@ -9,7 +9,10 @@
 <body>
 
     <h1>French Verb Conjugations</h1>
-
+    
+    <h2>ER Verbs (Regular)</h2>
+    <p><strong>Exception:</strong> Manger and voyager keep <em>-e-</em> in the <strong>nous</strong> form (mangeons, voyageons) for pronunciation.</p>
+    
     <table>
         <tr>
             <th>Verb</th>
@@ -22,7 +25,6 @@
             <th>Ils</th>
             <th>Elles</th>
         </tr>
-
         <tr>
             <td>Aimer</td>
             <td><button onclick="speak(`J'aime`)">J'aime 🔊</button></td>
@@ -34,65 +36,73 @@
             <td><button onclick="speak('Ils aiment')">Ils aiment 🔊</button></td>
             <td><button onclick="speak('Elles aiment')">Elles aiment 🔊</button></td>
         </tr>
+    </table>
 
+    <h2>-IR Verbs (Regular)</h2>
+    <p><strong>Exception:</strong> Ouvrir is an -IR verb but conjugates like an -ER verb.</p>
+    
+    <table>
         <tr>
-            <td>Manger</td>
-            <td><button onclick="speak(`Je mange`)">Je mange 🔊</button></td>
-            <td><button onclick="speak('Tu manges')">Tu manges 🔊</button></td>
-            <td><button onclick="speak('Il mange')">Il mange 🔊</button></td>
-            <td><button onclick="speak('Elle mange')">Elle mange 🔊</button></td>
-            <td><button onclick="speak('Nous mangeons')">Nous mangeons 🔊</button></td>
-            <td><button onclick="speak('Vous mangez')">Vous mangez 🔊</button></td>
-            <td><button onclick="speak('Ils mangent')">Ils mangent 🔊</button></td>
-            <td><button onclick="speak('Elles mangent')">Elles mangent 🔊</button></td>
+            <td>Ouvrir</td>
+            <td><button onclick="speak(`J'ouvre`)">J'ouvre 🔊</button></td>
+            <td><button onclick="speak('Tu ouvres')">Tu ouvres 🔊</button></td>
+            <td><button onclick="speak('Il ouvre')">Il ouvre 🔊</button></td>
+            <td><button onclick="speak('Elle ouvre')">Elle ouvre 🔊</button></td>
+            <td><button onclick="speak('Nous ouvrons')">Nous ouvrons 🔊</button></td>
+            <td><button onclick="speak('Vous ouvrez')">Vous ouvrez 🔊</button></td>
+            <td><button onclick="speak('Ils ouvrent')">Ils ouvrent 🔊</button></td>
+            <td><button onclick="speak('Elles ouvrent')">Elles ouvrent 🔊</button></td>
         </tr>
+    </table>
 
+    <h2>-RE Verbs (Regular)</h2>
+    <p><strong>Exception:</strong> Prendre drops the -d in the plural (nous prenons, ils prennent).</p>
+
+    <table>
         <tr>
-            <td>Habiter</td>
-            <td><button onclick="speak(`J'habite`)">J'habite 🔊</button></td>
-            <td><button onclick="speak('Tu habites')">Tu habites 🔊</button></td>
-            <td><button onclick="speak('Il habite')">Il habite 🔊</button></td>
-            <td><button onclick="speak('Elle habite')">Elle habite 🔊</button></td>
-            <td><button onclick="speak('Nous habitons')">Nous habitons 🔊</button></td>
-            <td><button onclick="speak('Vous habitez')">Vous habitez 🔊</button></td>
-            <td><button onclick="speak('Ils habitent')">Ils habitent 🔊</button></td>
-            <td><button onclick="speak('Elles habitent')">Elles habitent 🔊</button></td>
+            <td>Prendre</td>
+            <td><button onclick="speak(`Je prends`)">Je prends 🔊</button></td>
+            <td><button onclick="speak('Tu prends')">Tu prends 🔊</button></td>
+            <td><button onclick="speak('Il prend')">Il prend 🔊</button></td>
+            <td><button onclick="speak('Elle prend')">Elle prend 🔊</button></td>
+            <td><button onclick="speak('Nous prenons')">Nous prenons 🔊</button></td>
+            <td><button onclick="speak('Vous prenez')">Vous prenez 🔊</button></td>
+            <td><button onclick="speak('Ils prennent')">Ils prennent 🔊</button></td>
+            <td><button onclick="speak('Elles prennent')">Elles prennent 🔊</button></td>
         </tr>
+    </table>
 
+    <h2>Être & Avoir (Completely Irregular)</h2>
+    <p><strong>Essential verbs, used in almost every sentence.</strong></p>
+
+    <table>
         <tr>
-            <td>Parler</td>
-            <td><button onclick="speak(`Je parle`)">Je parle 🔊</button></td>
-            <td><button onclick="speak('Tu parles')">Tu parles 🔊</button></td>
-            <td><button onclick="speak('Il parle')">Il parle 🔊</button></td>
-            <td><button onclick="speak('Elle parle')">Elle parle 🔊</button></td>
-            <td><button onclick="speak('Nous parlons')">Nous parlons 🔊</button></td>
-            <td><button onclick="speak('Vous parlez')">Vous parlez 🔊</button></td>
-            <td><button onclick="speak('Ils parlent')">Ils parlent 🔊</button></td>
-            <td><button onclick="speak('Elles parlent')">Elles parlent 🔊</button></td>
+            <td>Être</td>
+            <td><button onclick="speak(`Je suis`)">Je suis 🔊</button></td>
+            <td><button onclick="speak('Tu es')">Tu es 🔊</button></td>
+            <td><button onclick="speak('Il est')">Il est 🔊</button></td>
+            <td><button onclick="speak('Elle est')">Elle est 🔊</button></td>
+            <td><button onclick="speak('Nous sommes')">Nous sommes 🔊</button></td>
+            <td><button onclick="speak('Vous êtes')">Vous êtes 🔊</button></td>
+            <td><button onclick="speak('Ils sont')">Ils sont 🔊</button></td>
+            <td><button onclick="speak('Elles sont')">Elles sont 🔊</button></td>
         </tr>
+    </table>
 
-        <tr>
-            <td>Travailler</td>
-            <td><button onclick="speak(`Je travaille`)">Je travaille 🔊</button></td>
-            <td><button onclick="speak('Tu travailles')">Tu travailles 🔊</button></td>
-            <td><button onclick="speak('Il travaille')">Il travaille 🔊</button></td>
-            <td><button onclick="speak('Elle travaille')">Elle travaille 🔊</button></td>
-            <td><button onclick="speak('Nous travaillons')">Nous travaillons 🔊</button></td>
-            <td><button onclick="speak('Vous travaillez')">Vous travaillez 🔊</button></td>
-            <td><button onclick="speak('Ils travaillent')">Ils travaillent 🔊</button></td>
-            <td><button onclick="speak('Elles travaillent')">Elles travaillent 🔊</button></td>
-        </tr>
+    <h2>Aller (Completely Irregular)</h2>
+    <p><strong>Very irregular, no clear pattern.</strong></p>
 
+    <table>
         <tr>
-            <td>Voyager</td>
-            <td><button onclick="speak(`Je voyage`)">Je voyage 🔊</button></td>
-            <td><button onclick="speak('Tu voyages')">Tu voyages 🔊</button></td>
-            <td><button onclick="speak('Il voyage')">Il voyage 🔊</button></td>
-            <td><button onclick="speak('Elle voyage')">Elle voyage 🔊</button></td>
-            <td><button onclick="speak('Nous voyageons')">Nous voyageons 🔊</button></td>
-            <td><button onclick="speak('Vous voyagez')">Vous voyagez 🔊</button></td>
-            <td><button onclick="speak('Ils voyagent')">Ils voyagent 🔊</button></td>
-            <td><button onclick="speak('Elles voyagent')">Elles voyagent 🔊</button></td>
+            <td>Aller</td>
+            <td><button onclick="speak(`Je vais`)">Je vais 🔊</button></td>
+            <td><button onclick="speak('Tu vas')">Tu vas 🔊</button></td>
+            <td><button onclick="speak('Il va')">Il va 🔊</button></td>
+            <td><button onclick="speak('Elle va')">Elle va 🔊</button></td>
+            <td><button onclick="speak('Nous allons')">Nous allons 🔊</button></td>
+            <td><button onclick="speak('Vous allez')">Vous allez 🔊</button></td>
+            <td><button onclick="speak('Ils vont')">Ils vont 🔊</button></td>
+            <td><button onclick="speak('Elles vont')">Elles vont 🔊</button></td>
         </tr>
     </table>
 
