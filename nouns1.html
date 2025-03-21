@@ -22,7 +22,6 @@
             <th>Our</th>
             <th>Their</th>
             <th>This/That</th>
-            <th>Audio</th>
         </tr>
     </table>
 
@@ -40,16 +39,13 @@
                 const tr = document.createElement("tr");
                 for (let i = 0; i < 11; i++) {
                     const td = document.createElement("td");
-                    td.textContent = cols[i];
+                    const button = document.createElement("button");
+                    button.textContent = "🔊";
+                    button.onclick = () => speak(cols[i]); // Speak the cell content
+                    td.textContent = cols[i] + " ";
+                    td.appendChild(button);
                     tr.appendChild(td);
                 }
-                // Add audio button
-                const audioTd = document.createElement("td");
-                const button = document.createElement("button");
-                button.textContent = "🔊";
-                button.onclick = () => speak(cols[0]); // Speak the noun
-                audioTd.appendChild(button);
-                tr.appendChild(audioTd);
                 table.appendChild(tr);
             });
         }
