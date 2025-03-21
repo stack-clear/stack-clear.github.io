@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Nouns</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>French Nouns</h1>
+    <table id="nounsTable">
+        <tr>
+            <th>Noun</th>
+            <th>Gender</th>
+            <th>A</th>
+            <th>The</th>
+            <th>My</th>
+            <th>Your (informal)</th>
+            <th>Your (formal)</th>
+            <th>His/Her</th>
+            <th>Our</th>
+            <th>Their</th>
+            <th>This/That</th>
+            <th>Audio</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+    <script>
+        async function loadNouns() {
+            const response = await fetch('nouns1.csv');
+            const data = await response.text();
+            const rows = data.split('\n').slice(1); // Remove header
+            const table = document.getElementById("nounsTable");
+
+            rows.forEach(row => {
+                const cols = row.split(',');
+                if (cols.length < 11) return; // Skip incomplete rows
+                const tr = document.createElement("tr");
+                for (let i = 0; i < 11; i++) {
+                    const td = document.createElement("td");
+                    td.textContent = cols[i];
+                    tr.appendChild(td);
+                }
+                // Add audio button
+                const audioTd = document.createElement("td");
+                const button = document.createElement("button");
+                button.textContent = "🔊";
+                button.onclick = () => speak(cols[0]); // Speak the noun
+                audioTd.appendChild(button);
+                tr.appendChild(audioTd);
+                table.appendChild(tr);
+            });
+        }
+        
+        loadNouns();
+    </script>
+</body>
+</html>
